@@ -5,7 +5,9 @@ import java.util.function.Supplier;
 
 import javax.websocket.server.PathParam;
 
+import org.apache.catalina.webresources.EmptyResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -62,7 +64,7 @@ public class DummyControllerTest {
 	public String deleteUser(@PathVariable int id) {
 		try {
 			userRepository.deleteById(id);
-		} catch (IllegalArgumentException e) {
+		} catch (EmptyResultDataAccessException e) {
 			// TODO: handle exception
 			return "삭제 실패하였습니다. 없는 사용자 입니다.";
 		}
