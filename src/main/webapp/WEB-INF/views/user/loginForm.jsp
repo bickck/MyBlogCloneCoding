@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<h2>Stacked form</h2>
-		<form action="/action_page.php">
+		<form>
 			<div class="form-group">
 				<label for="userName">userName:</label> <input type="text"
 					class="form-control" id="userName" placeholder="Enter userName"
@@ -15,9 +15,10 @@
 					class="form-control" id="password" placeholder="Enter password"
 					name="pswd">
 			</div>
-			<button type="submit" class="btn btn-primary">회원가입</button>
 		</form>
+		
+		<button id="btn-login" class="btn btn-primary">로그인</button>
 	</div>
 
-
+<script src="/blog/js/user.js"></script>
 <%@ include file = "../layout/footer.jsp" %>

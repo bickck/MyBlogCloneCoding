@@ -33,7 +33,7 @@ public class User {
 	private String username;
 	
 	@Column(nullable = false,length = 100)
-	private String passwd;
+	private String password;
 	
 	@Column(nullable = false,length = 50)
 	private String email;
@@ -61,12 +61,12 @@ public class User {
 		this.username = username;
 	}
 
-	public String getPasswd() {
-		return passwd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setPassword(String passwd) {
+		this.password = passwd;
 	}
 
 	public String getEmail() {
