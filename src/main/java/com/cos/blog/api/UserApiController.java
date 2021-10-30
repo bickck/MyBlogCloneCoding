@@ -19,7 +19,7 @@ public class UserApiController {
 	@Autowired
 	private UserService userService;
 
-	@PostMapping("/api/user")
+	@PostMapping("/auto/joinProc")
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		System.out.println("UserApiController: sava call ");
 
@@ -28,15 +28,12 @@ public class UserApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK, 1);
 		// 자바 오브젝트를 JSON으로 변환해서 반환
 	}
-
-	@PostMapping("/api/user/login")
-	public ResponseDto<Integer> login(@RequestBody User user, HttpSession httpSession) {
-		System.out.println("UserApiController: login call ");
-		User principal = userService.login(user);
-		if (principal != null) {
-			httpSession.setAttribute("principal", principal);
-		}
-		return new ResponseDto<Integer>(HttpStatus.OK, 1);
-		// 자바 오브젝트를 JSON으로 변환해서 반환
-	}
+	/*
+	 * @PostMapping("/api/user/login") public ResponseDto<Integer>
+	 * login(@RequestBody User user, HttpSession httpSession) {
+	 * System.out.println("UserApiController: login call "); User principal =
+	 * userService.login(user); if (principal != null) {
+	 * httpSession.setAttribute("principal", principal); } return new
+	 * ResponseDto<Integer>(HttpStatus.OK, 1); // 자바 오브젝트를 JSON으로 변환해서 반환 }
+	 */
 }
