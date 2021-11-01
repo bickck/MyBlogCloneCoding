@@ -4,7 +4,7 @@
 
 <div class="container">
 	<h2>Stacked form</h2>
-	<form action="#" method="post">
+	<form action="/auth/loginProc" method="post">
 		<div class="form-group">
 			<label for="userName">userName:</label> <input type="text"
 				class="form-control" name="username" id="userName"

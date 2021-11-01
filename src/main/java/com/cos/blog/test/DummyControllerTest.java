@@ -52,7 +52,7 @@ public class DummyControllerTest {
 		User user = userRepository.findById(id).orElseThrow(()->{
 			return new IllegalArgumentException("수정 실패");
 		});
-		user.setPasswd(requestUser.getPasswd());
+		user.setPassword(requestUser.getPassword());
 		user.setEmail(requestUser.getEmail());
 		
 		//userRepository.save(requestUser);
