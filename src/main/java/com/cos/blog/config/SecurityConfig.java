@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		// TODO Auto-generated method stub
 		http.csrf().disable() // 토큰 비활 성화( 테스트 걸어두는 게 좋음)
 			.authorizeRequests()
-				.antMatchers("/","/auth/**","/js/**","/css/**","/image")
+				.antMatchers("/","/auth/**","/js/**","/css/**","/image","/dummy/**")
 				.permitAll()
 				.anyRequest()
 				.authenticated()
