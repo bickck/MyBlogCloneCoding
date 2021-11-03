@@ -1,5 +1,8 @@
 package com.cos.blog.controller;
 
+import java.security.Principal;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -16,5 +19,9 @@ public class UserController {
 		return "user/loginForm";
 	}
 	
+	@GetMapping("/updateForm")
+	public String updateForm(@AuthenticationPrincipal Principal principal) {
+		return "user/updateForm";
+	}
 
 }
